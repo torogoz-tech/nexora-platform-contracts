@@ -1,0 +1,854 @@
+[
+  {
+    "kind": "invitation",
+    "language": "es",
+    "subject": "Invitación a {{organization_name}}",
+    "body_html": "<p>Hola {{recipient_name}},</p><p>{{inviter_name}} te invita a colaborar en {{organization_name}}.</p><p><a href=\"{{invitation_url}}\">Aceptar invitación</a></p><p>La invitación vence el {{expires_at}}. Si no esperabas este correo, puedes ignorarlo.</p>",
+    "default_subject": "Invitación a {{organization_name}}",
+    "default_body_html": "<p>Hola {{recipient_name}},</p><p>{{inviter_name}} te invita a colaborar en {{organization_name}}.</p><p><a href=\"{{invitation_url}}\">Aceptar invitación</a></p><p>La invitación vence el {{expires_at}}. Si no esperabas este correo, puedes ignorarlo.</p>",
+    "revision": 1,
+    "parameters": [
+      {
+        "name": "organization_name",
+        "description_es": "Nombre de la organización",
+        "description_en": "Organization name",
+        "sample": "Infinitech",
+        "required": false,
+        "value_kind": "text"
+      },
+      {
+        "name": "recipient_name",
+        "description_es": "Nombre del destinatario",
+        "description_en": "Recipient name",
+        "sample": "Ana",
+        "required": false,
+        "value_kind": "text"
+      },
+      {
+        "name": "inviter_name",
+        "description_es": "Persona que invita",
+        "description_en": "Inviter name",
+        "sample": "Carlos",
+        "required": false,
+        "value_kind": "text"
+      },
+      {
+        "name": "invitation_url",
+        "description_es": "Enlace seguro para aceptar la invitación",
+        "description_en": "Secure invitation acceptance URL",
+        "sample": "https://nexora.example/invitations/accept?token=example",
+        "required": true,
+        "value_kind": "url"
+      },
+      {
+        "name": "expires_at",
+        "description_es": "Vencimiento de la invitación",
+        "description_en": "Invitation expiration",
+        "sample": "2026-12-01 18:00 UTC",
+        "required": true,
+        "value_kind": "text"
+      }
+    ],
+    "customized": false,
+    "delivery_enabled": true
+  },
+  {
+    "kind": "invitation",
+    "language": "en",
+    "subject": "Invitation to {{organization_name}}",
+    "body_html": "<p>Hello {{recipient_name}},</p><p>{{inviter_name}} invites you to collaborate at {{organization_name}}.</p><p><a href=\"{{invitation_url}}\">Accept invitation</a></p><p>The invitation expires on {{expires_at}}. If you were not expecting this email, you can ignore it.</p>",
+    "default_subject": "Invitation to {{organization_name}}",
+    "default_body_html": "<p>Hello {{recipient_name}},</p><p>{{inviter_name}} invites you to collaborate at {{organization_name}}.</p><p><a href=\"{{invitation_url}}\">Accept invitation</a></p><p>The invitation expires on {{expires_at}}. If you were not expecting this email, you can ignore it.</p>",
+    "revision": 1,
+    "parameters": [
+      {
+        "name": "organization_name",
+        "description_es": "Nombre de la organización",
+        "description_en": "Organization name",
+        "sample": "Infinitech",
+        "required": false,
+        "value_kind": "text"
+      },
+      {
+        "name": "recipient_name",
+        "description_es": "Nombre del destinatario",
+        "description_en": "Recipient name",
+        "sample": "Ana",
+        "required": false,
+        "value_kind": "text"
+      },
+      {
+        "name": "inviter_name",
+        "description_es": "Persona que invita",
+        "description_en": "Inviter name",
+        "sample": "Carlos",
+        "required": false,
+        "value_kind": "text"
+      },
+      {
+        "name": "invitation_url",
+        "description_es": "Enlace seguro para aceptar la invitación",
+        "description_en": "Secure invitation acceptance URL",
+        "sample": "https://nexora.example/invitations/accept?token=example",
+        "required": true,
+        "value_kind": "url"
+      },
+      {
+        "name": "expires_at",
+        "description_es": "Vencimiento de la invitación",
+        "description_en": "Invitation expiration",
+        "sample": "2026-12-01 18:00 UTC",
+        "required": true,
+        "value_kind": "text"
+      }
+    ],
+    "customized": false,
+    "delivery_enabled": true
+  },
+  {
+    "kind": "invitation_accepted",
+    "language": "es",
+    "subject": "{{member_name}} se unió a {{organization_name}}",
+    "body_html": "<p>Hola {{recipient_name}},</p><p>{{member_name}} ha aceptado la invitación y se ha unido a {{organization_name}}.</p>",
+    "default_subject": "{{member_name}} se unió a {{organization_name}}",
+    "default_body_html": "<p>Hola {{recipient_name}},</p><p>{{member_name}} ha aceptado la invitación y se ha unido a {{organization_name}}.</p>",
+    "revision": 1,
+    "parameters": [
+      {
+        "name": "organization_name",
+        "description_es": "Nombre de la organización",
+        "description_en": "Organization name",
+        "sample": "Infinitech",
+        "required": false,
+        "value_kind": "text"
+      },
+      {
+        "name": "recipient_name",
+        "description_es": "Nombre del destinatario",
+        "description_en": "Recipient name",
+        "sample": "Ana",
+        "required": false,
+        "value_kind": "text"
+      },
+      {
+        "name": "member_name",
+        "description_es": "Persona que aceptó la invitación",
+        "description_en": "Member who accepted the invitation",
+        "sample": "Ana",
+        "required": true,
+        "value_kind": "text"
+      }
+    ],
+    "customized": false,
+    "delivery_enabled": true
+  },
+  {
+    "kind": "invitation_accepted",
+    "language": "en",
+    "subject": "{{member_name}} joined {{organization_name}}",
+    "body_html": "<p>Hello {{recipient_name}},</p><p>{{member_name}} has accepted the invitation and joined {{organization_name}}.</p>",
+    "default_subject": "{{member_name}} joined {{organization_name}}",
+    "default_body_html": "<p>Hello {{recipient_name}},</p><p>{{member_name}} has accepted the invitation and joined {{organization_name}}.</p>",
+    "revision": 1,
+    "parameters": [
+      {
+        "name": "organization_name",
+        "description_es": "Nombre de la organización",
+        "description_en": "Organization name",
+        "sample": "Infinitech",
+        "required": false,
+        "value_kind": "text"
+      },
+      {
+        "name": "recipient_name",
+        "description_es": "Nombre del destinatario",
+        "description_en": "Recipient name",
+        "sample": "Ana",
+        "required": false,
+        "value_kind": "text"
+      },
+      {
+        "name": "member_name",
+        "description_es": "Persona que aceptó la invitación",
+        "description_en": "Member who accepted the invitation",
+        "sample": "Ana",
+        "required": true,
+        "value_kind": "text"
+      }
+    ],
+    "customized": false,
+    "delivery_enabled": true
+  },
+  {
+    "kind": "password_reset",
+    "language": "es",
+    "subject": "Recupera tu acceso a {{organization_name}}",
+    "body_html": "<p>Hola {{recipient_name}},</p><p>Recibimos una solicitud para recuperar tu contraseña en {{organization_name}}.</p><p><a href=\"{{reset_url}}\">Restablecer contraseña</a></p><p>El enlace vence el {{expires_at}}. Si no lo solicitaste, ignora este correo.</p>",
+    "default_subject": "Recupera tu acceso a {{organization_name}}",
+    "default_body_html": "<p>Hola {{recipient_name}},</p><p>Recibimos una solicitud para recuperar tu contraseña en {{organization_name}}.</p><p><a href=\"{{reset_url}}\">Restablecer contraseña</a></p><p>El enlace vence el {{expires_at}}. Si no lo solicitaste, ignora este correo.</p>",
+    "revision": 1,
+    "parameters": [
+      {
+        "name": "organization_name",
+        "description_es": "Nombre de la organización",
+        "description_en": "Organization name",
+        "sample": "Infinitech",
+        "required": false,
+        "value_kind": "text"
+      },
+      {
+        "name": "recipient_name",
+        "description_es": "Nombre del destinatario",
+        "description_en": "Recipient name",
+        "sample": "Ana",
+        "required": false,
+        "value_kind": "text"
+      },
+      {
+        "name": "reset_url",
+        "description_es": "Enlace seguro para recuperar la contraseña",
+        "description_en": "Secure password recovery URL",
+        "sample": "https://nexora.example/reset-password?token=example",
+        "required": true,
+        "value_kind": "url"
+      },
+      {
+        "name": "expires_at",
+        "description_es": "Vencimiento del enlace",
+        "description_en": "Link expiration",
+        "sample": "2026-12-01 18:00 UTC",
+        "required": true,
+        "value_kind": "text"
+      }
+    ],
+    "customized": false,
+    "delivery_enabled": true
+  },
+  {
+    "kind": "password_reset",
+    "language": "en",
+    "subject": "Recover your access to {{organization_name}}",
+    "body_html": "<p>Hello {{recipient_name}},</p><p>We received a password recovery request for your account at {{organization_name}}.</p><p><a href=\"{{reset_url}}\">Reset password</a></p><p>The link expires on {{expires_at}}. If you did not request it, ignore this email.</p>",
+    "default_subject": "Recover your access to {{organization_name}}",
+    "default_body_html": "<p>Hello {{recipient_name}},</p><p>We received a password recovery request for your account at {{organization_name}}.</p><p><a href=\"{{reset_url}}\">Reset password</a></p><p>The link expires on {{expires_at}}. If you did not request it, ignore this email.</p>",
+    "revision": 1,
+    "parameters": [
+      {
+        "name": "organization_name",
+        "description_es": "Nombre de la organización",
+        "description_en": "Organization name",
+        "sample": "Infinitech",
+        "required": false,
+        "value_kind": "text"
+      },
+      {
+        "name": "recipient_name",
+        "description_es": "Nombre del destinatario",
+        "description_en": "Recipient name",
+        "sample": "Ana",
+        "required": false,
+        "value_kind": "text"
+      },
+      {
+        "name": "reset_url",
+        "description_es": "Enlace seguro para recuperar la contraseña",
+        "description_en": "Secure password recovery URL",
+        "sample": "https://nexora.example/reset-password?token=example",
+        "required": true,
+        "value_kind": "url"
+      },
+      {
+        "name": "expires_at",
+        "description_es": "Vencimiento del enlace",
+        "description_en": "Link expiration",
+        "sample": "2026-12-01 18:00 UTC",
+        "required": true,
+        "value_kind": "text"
+      }
+    ],
+    "customized": false,
+    "delivery_enabled": true
+  },
+  {
+    "kind": "assignment",
+    "language": "es",
+    "subject": "Tarea asignada · {{organization_name}}",
+    "body_html": "<p>Hola {{recipient_name}},</p><p>Tienes una tarea asignada en <strong>{{project_name}}</strong>.</p><p>Referencia: {{resource_id}}</p><p>Ingresa a Nexora para consultar los detalles actuales.</p>",
+    "default_subject": "Tarea asignada · {{organization_name}}",
+    "default_body_html": "<p>Hola {{recipient_name}},</p><p>Tienes una tarea asignada en <strong>{{project_name}}</strong>.</p><p>Referencia: {{resource_id}}</p><p>Ingresa a Nexora para consultar los detalles actuales.</p>",
+    "revision": 1,
+    "parameters": [
+      {
+        "name": "organization_name",
+        "description_es": "Nombre de la organización",
+        "description_en": "Organization name",
+        "sample": "Infinitech",
+        "required": false,
+        "value_kind": "text"
+      },
+      {
+        "name": "recipient_name",
+        "description_es": "Nombre del destinatario",
+        "description_en": "Recipient name",
+        "sample": "Ana",
+        "required": false,
+        "value_kind": "text"
+      },
+      {
+        "name": "project_name",
+        "description_es": "Nombre del proyecto",
+        "description_en": "Project name",
+        "sample": "Smart Ticket",
+        "required": false,
+        "value_kind": "text"
+      },
+      {
+        "name": "resource_id",
+        "description_es": "Identificador de la tarea",
+        "description_en": "Task identifier",
+        "sample": "tsk_example",
+        "required": true,
+        "value_kind": "text"
+      }
+    ],
+    "customized": false,
+    "delivery_enabled": true
+  },
+  {
+    "kind": "assignment",
+    "language": "en",
+    "subject": "Task assignment · {{organization_name}}",
+    "body_html": "<p>Hello {{recipient_name}},</p><p>A task has been assigned to you in <strong>{{project_name}}</strong>.</p><p>Reference: {{resource_id}}</p><p>Sign in to Nexora to view the current details.</p>",
+    "default_subject": "Task assignment · {{organization_name}}",
+    "default_body_html": "<p>Hello {{recipient_name}},</p><p>A task has been assigned to you in <strong>{{project_name}}</strong>.</p><p>Reference: {{resource_id}}</p><p>Sign in to Nexora to view the current details.</p>",
+    "revision": 1,
+    "parameters": [
+      {
+        "name": "organization_name",
+        "description_es": "Nombre de la organización",
+        "description_en": "Organization name",
+        "sample": "Infinitech",
+        "required": false,
+        "value_kind": "text"
+      },
+      {
+        "name": "recipient_name",
+        "description_es": "Nombre del destinatario",
+        "description_en": "Recipient name",
+        "sample": "Ana",
+        "required": false,
+        "value_kind": "text"
+      },
+      {
+        "name": "project_name",
+        "description_es": "Nombre del proyecto",
+        "description_en": "Project name",
+        "sample": "Smart Ticket",
+        "required": false,
+        "value_kind": "text"
+      },
+      {
+        "name": "resource_id",
+        "description_es": "Identificador de la tarea",
+        "description_en": "Task identifier",
+        "sample": "tsk_example",
+        "required": true,
+        "value_kind": "text"
+      }
+    ],
+    "customized": false,
+    "delivery_enabled": true
+  },
+  {
+    "kind": "approval",
+    "language": "es",
+    "subject": "Solicitud de aprobación · {{organization_name}}",
+    "body_html": "<p>Hola {{recipient_name}},</p><p>Hay una solicitud pendiente de tu revisión en <strong>{{project_name}}</strong>.</p><p>Referencia: {{resource_id}}</p><p>Ingresa a Nexora para revisar y decidir.</p>",
+    "default_subject": "Solicitud de aprobación · {{organization_name}}",
+    "default_body_html": "<p>Hola {{recipient_name}},</p><p>Hay una solicitud pendiente de tu revisión en <strong>{{project_name}}</strong>.</p><p>Referencia: {{resource_id}}</p><p>Ingresa a Nexora para revisar y decidir.</p>",
+    "revision": 1,
+    "parameters": [
+      {
+        "name": "organization_name",
+        "description_es": "Nombre de la organización",
+        "description_en": "Organization name",
+        "sample": "Infinitech",
+        "required": false,
+        "value_kind": "text"
+      },
+      {
+        "name": "recipient_name",
+        "description_es": "Nombre del destinatario",
+        "description_en": "Recipient name",
+        "sample": "Ana",
+        "required": false,
+        "value_kind": "text"
+      },
+      {
+        "name": "project_name",
+        "description_es": "Nombre del proyecto",
+        "description_en": "Project name",
+        "sample": "Smart Ticket",
+        "required": false,
+        "value_kind": "text"
+      },
+      {
+        "name": "resource_id",
+        "description_es": "Identificador de la solicitud",
+        "description_en": "Request identifier",
+        "sample": "apr_example",
+        "required": true,
+        "value_kind": "text"
+      }
+    ],
+    "customized": false,
+    "delivery_enabled": true
+  },
+  {
+    "kind": "approval",
+    "language": "en",
+    "subject": "Approval requested · {{organization_name}}",
+    "body_html": "<p>Hello {{recipient_name}},</p><p>A request is awaiting your review in <strong>{{project_name}}</strong>.</p><p>Reference: {{resource_id}}</p><p>Sign in to Nexora to review and decide.</p>",
+    "default_subject": "Approval requested · {{organization_name}}",
+    "default_body_html": "<p>Hello {{recipient_name}},</p><p>A request is awaiting your review in <strong>{{project_name}}</strong>.</p><p>Reference: {{resource_id}}</p><p>Sign in to Nexora to review and decide.</p>",
+    "revision": 1,
+    "parameters": [
+      {
+        "name": "organization_name",
+        "description_es": "Nombre de la organización",
+        "description_en": "Organization name",
+        "sample": "Infinitech",
+        "required": false,
+        "value_kind": "text"
+      },
+      {
+        "name": "recipient_name",
+        "description_es": "Nombre del destinatario",
+        "description_en": "Recipient name",
+        "sample": "Ana",
+        "required": false,
+        "value_kind": "text"
+      },
+      {
+        "name": "project_name",
+        "description_es": "Nombre del proyecto",
+        "description_en": "Project name",
+        "sample": "Smart Ticket",
+        "required": false,
+        "value_kind": "text"
+      },
+      {
+        "name": "resource_id",
+        "description_es": "Identificador de la solicitud",
+        "description_en": "Request identifier",
+        "sample": "apr_example",
+        "required": true,
+        "value_kind": "text"
+      }
+    ],
+    "customized": false,
+    "delivery_enabled": true
+  },
+  {
+    "kind": "approval_result",
+    "language": "es",
+    "subject": "Resultado de aprobación · {{organization_name}}",
+    "body_html": "<p>Hola {{recipient_name}},</p><p>La solicitud {{resource_id}} de {{project_name}} tiene el siguiente resultado: <strong>{{decision}}</strong>.</p><p>{{reason}}</p>",
+    "default_subject": "Resultado de aprobación · {{organization_name}}",
+    "default_body_html": "<p>Hola {{recipient_name}},</p><p>La solicitud {{resource_id}} de {{project_name}} tiene el siguiente resultado: <strong>{{decision}}</strong>.</p><p>{{reason}}</p>",
+    "revision": 1,
+    "parameters": [
+      {
+        "name": "organization_name",
+        "description_es": "Nombre de la organización",
+        "description_en": "Organization name",
+        "sample": "Infinitech",
+        "required": false,
+        "value_kind": "text"
+      },
+      {
+        "name": "recipient_name",
+        "description_es": "Nombre del destinatario",
+        "description_en": "Recipient name",
+        "sample": "Ana",
+        "required": false,
+        "value_kind": "text"
+      },
+      {
+        "name": "project_name",
+        "description_es": "Nombre del proyecto",
+        "description_en": "Project name",
+        "sample": "Smart Ticket",
+        "required": false,
+        "value_kind": "text"
+      },
+      {
+        "name": "resource_id",
+        "description_es": "Identificador de la solicitud",
+        "description_en": "Request identifier",
+        "sample": "apr_example",
+        "required": true,
+        "value_kind": "text"
+      },
+      {
+        "name": "decision",
+        "description_es": "Resultado de la aprobación",
+        "description_en": "Approval outcome",
+        "sample": "Aprobada",
+        "required": true,
+        "value_kind": "text"
+      },
+      {
+        "name": "reason",
+        "description_es": "Motivo de la decisión",
+        "description_en": "Decision reason",
+        "sample": "Revisión completada.",
+        "required": false,
+        "value_kind": "text"
+      }
+    ],
+    "customized": false,
+    "delivery_enabled": true
+  },
+  {
+    "kind": "approval_result",
+    "language": "en",
+    "subject": "Approval outcome · {{organization_name}}",
+    "body_html": "<p>Hello {{recipient_name}},</p><p>Request {{resource_id}} in {{project_name}} has the following outcome: <strong>{{decision}}</strong>.</p><p>{{reason}}</p>",
+    "default_subject": "Approval outcome · {{organization_name}}",
+    "default_body_html": "<p>Hello {{recipient_name}},</p><p>Request {{resource_id}} in {{project_name}} has the following outcome: <strong>{{decision}}</strong>.</p><p>{{reason}}</p>",
+    "revision": 1,
+    "parameters": [
+      {
+        "name": "organization_name",
+        "description_es": "Nombre de la organización",
+        "description_en": "Organization name",
+        "sample": "Infinitech",
+        "required": false,
+        "value_kind": "text"
+      },
+      {
+        "name": "recipient_name",
+        "description_es": "Nombre del destinatario",
+        "description_en": "Recipient name",
+        "sample": "Ana",
+        "required": false,
+        "value_kind": "text"
+      },
+      {
+        "name": "project_name",
+        "description_es": "Nombre del proyecto",
+        "description_en": "Project name",
+        "sample": "Smart Ticket",
+        "required": false,
+        "value_kind": "text"
+      },
+      {
+        "name": "resource_id",
+        "description_es": "Identificador de la solicitud",
+        "description_en": "Request identifier",
+        "sample": "apr_example",
+        "required": true,
+        "value_kind": "text"
+      },
+      {
+        "name": "decision",
+        "description_es": "Resultado de la aprobación",
+        "description_en": "Approval outcome",
+        "sample": "Approved",
+        "required": true,
+        "value_kind": "text"
+      },
+      {
+        "name": "reason",
+        "description_es": "Motivo de la decisión",
+        "description_en": "Decision reason",
+        "sample": "Review completed.",
+        "required": false,
+        "value_kind": "text"
+      }
+    ],
+    "customized": false,
+    "delivery_enabled": true
+  },
+  {
+    "kind": "test",
+    "language": "es",
+    "subject": "Prueba de correo · {{organization_name}}",
+    "body_html": "<p>Hola {{recipient_name}},</p><p>Esta prueba confirma que {{organization_name}} puede enviar correos mediante el servidor SMTP configurado.</p>",
+    "default_subject": "Prueba de correo · {{organization_name}}",
+    "default_body_html": "<p>Hola {{recipient_name}},</p><p>Esta prueba confirma que {{organization_name}} puede enviar correos mediante el servidor SMTP configurado.</p>",
+    "revision": 1,
+    "parameters": [
+      {
+        "name": "organization_name",
+        "description_es": "Nombre de la organización",
+        "description_en": "Organization name",
+        "sample": "Infinitech",
+        "required": false,
+        "value_kind": "text"
+      },
+      {
+        "name": "recipient_name",
+        "description_es": "Nombre del destinatario",
+        "description_en": "Recipient name",
+        "sample": "Ana",
+        "required": false,
+        "value_kind": "text"
+      }
+    ],
+    "customized": false,
+    "delivery_enabled": true
+  },
+  {
+    "kind": "test",
+    "language": "en",
+    "subject": "Email test · {{organization_name}}",
+    "body_html": "<p>Hello {{recipient_name}},</p><p>This test confirms that {{organization_name}} can deliver email through the configured SMTP server.</p>",
+    "default_subject": "Email test · {{organization_name}}",
+    "default_body_html": "<p>Hello {{recipient_name}},</p><p>This test confirms that {{organization_name}} can deliver email through the configured SMTP server.</p>",
+    "revision": 1,
+    "parameters": [
+      {
+        "name": "organization_name",
+        "description_es": "Nombre de la organización",
+        "description_en": "Organization name",
+        "sample": "Infinitech",
+        "required": false,
+        "value_kind": "text"
+      },
+      {
+        "name": "recipient_name",
+        "description_es": "Nombre del destinatario",
+        "description_en": "Recipient name",
+        "sample": "Ana",
+        "required": false,
+        "value_kind": "text"
+      }
+    ],
+    "customized": false,
+    "delivery_enabled": true
+  },
+  {
+    "kind": "email_verification",
+    "language": "es",
+    "subject": "Verifica tu correo en {{organization_name}}",
+    "body_html": "<p>Hola {{recipient_name}},</p><p>Introduce este código en tu perfil para confirmar tu correo:</p><p><strong>{{verification_code}}</strong></p><p>Vence en 15 minutos. Si no lo solicitaste, ignora este mensaje.</p>",
+    "default_subject": "Verifica tu correo en {{organization_name}}",
+    "default_body_html": "<p>Hola {{recipient_name}},</p><p>Introduce este código en tu perfil para confirmar tu correo:</p><p><strong>{{verification_code}}</strong></p><p>Vence en 15 minutos. Si no lo solicitaste, ignora este mensaje.</p>",
+    "revision": 1,
+    "parameters": [
+      {
+        "name": "organization_name",
+        "description_es": "Organización",
+        "description_en": "Organization",
+        "sample": "Infinitech",
+        "required": false,
+        "value_kind": "text"
+      },
+      {
+        "name": "recipient_name",
+        "description_es": "Destinatario",
+        "description_en": "Recipient",
+        "sample": "Ana",
+        "required": false,
+        "value_kind": "text"
+      },
+      {
+        "name": "verification_code",
+        "description_es": "Código de verificación",
+        "description_en": "Verification code",
+        "sample": "123456",
+        "required": true,
+        "value_kind": "text"
+      }
+    ],
+    "customized": false,
+    "delivery_enabled": true
+  },
+  {
+    "kind": "email_verification",
+    "language": "en",
+    "subject": "Verify your email at {{organization_name}}",
+    "body_html": "<p>Hello {{recipient_name}},</p><p>Enter this code in your profile to confirm your email:</p><p><strong>{{verification_code}}</strong></p><p>It expires in 15 minutes. If you did not request this, ignore this message.</p>",
+    "default_subject": "Verify your email at {{organization_name}}",
+    "default_body_html": "<p>Hello {{recipient_name}},</p><p>Enter this code in your profile to confirm your email:</p><p><strong>{{verification_code}}</strong></p><p>It expires in 15 minutes. If you did not request this, ignore this message.</p>",
+    "revision": 1,
+    "parameters": [
+      {
+        "name": "organization_name",
+        "description_es": "Organización",
+        "description_en": "Organization",
+        "sample": "Infinitech",
+        "required": false,
+        "value_kind": "text"
+      },
+      {
+        "name": "recipient_name",
+        "description_es": "Destinatario",
+        "description_en": "Recipient",
+        "sample": "Ana",
+        "required": false,
+        "value_kind": "text"
+      },
+      {
+        "name": "verification_code",
+        "description_es": "Código de verificación",
+        "description_en": "Verification code",
+        "sample": "123456",
+        "required": true,
+        "value_kind": "text"
+      }
+    ],
+    "customized": false,
+    "delivery_enabled": true
+  },
+  {
+    "kind": "email_changed",
+    "language": "es",
+    "subject": "Tu correo fue actualizado en {{organization_name}}",
+    "body_html": "<p>Hola {{recipient_name}},</p><p>El correo de tu cuenta ahora es {{new_email}}. Si no solicitaste este cambio, comunícate con el administrador.</p>",
+    "default_subject": "Tu correo fue actualizado en {{organization_name}}",
+    "default_body_html": "<p>Hola {{recipient_name}},</p><p>El correo de tu cuenta ahora es {{new_email}}. Si no solicitaste este cambio, comunícate con el administrador.</p>",
+    "revision": 1,
+    "parameters": [
+      {
+        "name": "organization_name",
+        "description_es": "Organización",
+        "description_en": "Organization",
+        "sample": "Infinitech",
+        "required": false,
+        "value_kind": "text"
+      },
+      {
+        "name": "recipient_name",
+        "description_es": "Destinatario",
+        "description_en": "Recipient",
+        "sample": "Ana",
+        "required": false,
+        "value_kind": "text"
+      },
+      {
+        "name": "new_email",
+        "description_es": "Correo nuevo",
+        "description_en": "New email",
+        "sample": "ana@example.com",
+        "required": true,
+        "value_kind": "text"
+      }
+    ],
+    "customized": false,
+    "delivery_enabled": true
+  },
+  {
+    "kind": "email_changed",
+    "language": "en",
+    "subject": "Your email was updated at {{organization_name}}",
+    "body_html": "<p>Hello {{recipient_name}},</p><p>Your account email is now {{new_email}}. If you did not request this change, contact your administrator.</p>",
+    "default_subject": "Your email was updated at {{organization_name}}",
+    "default_body_html": "<p>Hello {{recipient_name}},</p><p>Your account email is now {{new_email}}. If you did not request this change, contact your administrator.</p>",
+    "revision": 1,
+    "parameters": [
+      {
+        "name": "organization_name",
+        "description_es": "Organización",
+        "description_en": "Organization",
+        "sample": "Infinitech",
+        "required": false,
+        "value_kind": "text"
+      },
+      {
+        "name": "recipient_name",
+        "description_es": "Destinatario",
+        "description_en": "Recipient",
+        "sample": "Ana",
+        "required": false,
+        "value_kind": "text"
+      },
+      {
+        "name": "new_email",
+        "description_es": "Correo nuevo",
+        "description_en": "New email",
+        "sample": "ana@example.com",
+        "required": true,
+        "value_kind": "text"
+      }
+    ],
+    "customized": false,
+    "delivery_enabled": true
+  },
+  {
+    "kind": "workflow_transition",
+    "language": "es",
+    "subject": "Tarea actualizada en {{organization_name}}",
+    "body_html": "<p>Hola {{recipient_name}},</p><p>La tarea {{resource_id}} cambió de estado.</p>",
+    "default_subject": "Tarea actualizada en {{organization_name}}",
+    "default_body_html": "<p>Hola {{recipient_name}},</p><p>La tarea {{resource_id}} cambió de estado.</p>",
+    "revision": 1,
+    "parameters": [
+      {
+        "name": "organization_name",
+        "description_es": "Nombre de la organización",
+        "description_en": "Organization name",
+        "sample": "Infinitech",
+        "required": false,
+        "value_kind": "text"
+      },
+      {
+        "name": "recipient_name",
+        "description_es": "Nombre del destinatario",
+        "description_en": "Recipient name",
+        "sample": "Ana",
+        "required": false,
+        "value_kind": "text"
+      },
+      {
+        "name": "resource_id",
+        "description_es": "Identificador de la tarea",
+        "description_en": "Task identifier",
+        "sample": "tsk_example",
+        "required": true,
+        "value_kind": "text"
+      }
+    ],
+    "customized": false,
+    "delivery_enabled": true
+  },
+  {
+    "kind": "workflow_transition",
+    "language": "en",
+    "subject": "Task updated in {{organization_name}}",
+    "body_html": "<p>Hello {{recipient_name}},</p><p>Task {{resource_id}} changed state.</p>",
+    "default_subject": "Task updated in {{organization_name}}",
+    "default_body_html": "<p>Hello {{recipient_name}},</p><p>Task {{resource_id}} changed state.</p>",
+    "revision": 1,
+    "parameters": [
+      {
+        "name": "organization_name",
+        "description_es": "Nombre de la organización",
+        "description_en": "Organization name",
+        "sample": "Infinitech",
+        "required": false,
+        "value_kind": "text"
+      },
+      {
+        "name": "recipient_name",
+        "description_es": "Nombre del destinatario",
+        "description_en": "Recipient name",
+        "sample": "Ana",
+        "required": false,
+        "value_kind": "text"
+      },
+      {
+        "name": "resource_id",
+        "description_es": "Identificador de la tarea",
+        "description_en": "Task identifier",
+        "sample": "tsk_example",
+        "required": true,
+        "value_kind": "text"
+      }
+    ],
+    "customized": false,
+    "delivery_enabled": true
+  }
+]
