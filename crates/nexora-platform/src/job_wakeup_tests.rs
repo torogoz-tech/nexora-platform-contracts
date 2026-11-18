@@ -72,6 +72,7 @@ fn job_kinds_route_to_their_own_worker_queue() {
         JobKind::DailyDeveloperAnalysis.routing_key(),
         "nexora.jobs.knowledge"
     );
+    assert_eq!(JobKind::TaskReview.routing_key(), "nexora.jobs.knowledge");
     assert_eq!(
         JobKind::EmailNotification.routing_key(),
         "nexora.jobs.notification"
