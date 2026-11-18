@@ -1,0 +1,30 @@
+use crate::{ApprovalRequestStatus, ApprovalRequestTarget};
+use serde::{Deserialize, Serialize};
+#[derive(Debug, Clone, Deserialize, Serialize)]
+pub struct ApprovalRequest {
+    pub id: String,
+    pub project_id: String,
+    pub target: ApprovalRequestTarget,
+    pub target_kind: String,
+    pub resource_id: String,
+    pub version_id: Option<String>,
+    pub transition_id: String,
+    pub root_revision: i64,
+    pub resource_revision: i64,
+    pub workflow_version_id: String,
+    pub from_state: String,
+    pub to_state: String,
+    pub operation_checksum: String,
+    pub status: ApprovalRequestStatus,
+    pub revision: i64,
+    pub reason: String,
+    pub requested_by: String,
+    pub credential_id: String,
+    pub created_at: String,
+    pub expires_at: String,
+    pub approval_id: Option<String>,
+    pub decided_by: Option<String>,
+    pub decided_credential_id: Option<String>,
+    pub decision_reason: Option<String>,
+    pub decided_at: Option<String>,
+}
