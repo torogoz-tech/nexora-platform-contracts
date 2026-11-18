@@ -10,6 +10,7 @@ pub enum JobKind {
     KnowledgeSynthesis,
     KnowledgeProcessing,
     DailyDeveloperAnalysis,
+    TaskReview,
     EmailNotification,
 }
 
@@ -22,9 +23,10 @@ impl JobKind {
         match self {
             Self::RepositorySync | Self::RepositoryIndex => "nexora.jobs.analysis",
             Self::TaskTransitionResume | Self::ReleaseComposition => "nexora.jobs.release",
-            Self::KnowledgeSynthesis | Self::KnowledgeProcessing | Self::DailyDeveloperAnalysis => {
-                "nexora.jobs.knowledge"
-            }
+            Self::KnowledgeSynthesis
+            | Self::KnowledgeProcessing
+            | Self::DailyDeveloperAnalysis
+            | Self::TaskReview => "nexora.jobs.knowledge",
             Self::EmailNotification => "nexora.jobs.notification",
         }
     }

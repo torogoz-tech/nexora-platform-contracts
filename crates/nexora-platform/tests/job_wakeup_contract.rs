@@ -57,6 +57,7 @@ fn job_wakeup_preserves_versioned_wire_shape_and_routing_names() {
             "daily_developer_analysis",
             "nexora.jobs.knowledge",
         ),
+        (JobKind::TaskReview, "task_review", "nexora.jobs.knowledge"),
         (
             JobKind::EmailNotification,
             "email_notification",
